@@ -1,0 +1,19 @@
+
+ANÁLISE:
+frase.count('o')= Conta quantas vezes aparece uma letra num termo digitado.
+frase.count('o',0,13)= Conta quantas vezes uma letra aparece em um intervalo.
+frase.find('deo')= Se digitar vídeo, por exemplo, vai indicar a partir de que momento a primeira letra de 'deo' vai aparecer, no caso 'd'.
+len(frase)= Vai ler quantos caracteres tem uma frase (contando os espaços).
+'curso' in frase= Na frase: Curso em vídeo; vai indicar se há essa palavra na frase digitada.
+TRANSFORMAÇÃO:
+frase.strip()=vai tirar os espaços exagerados digitados pelo usuário.
+frase.rstrip()=Vai tirar os espaços da direita
+frase.lstrip()=Vai tirar os espaços da esquerda
+frase.replace('Python','Android')= Comando replace troca uma palavra digitada por outra.
+frase.title()=vai deixar a PRIMEIRA letra de cada palavra separada por espaços maiúscula: 'Curso Em Vídeo'
+frase.upper()=tornar as letras minúsculas maiúsculas
+frase.lower()=tornar as letras maiúsculas minúsculas
+frase.capitalize()=tornar só a PRIMEIRA palavra com letra maiúscula: 'Curso em vídeo'
+DIVISÃO DE STRINGS:
+frase.split(): Quebrar cada palavra em um termo diferente. "curso; em; vídeo;"
+'-'.join(frase)= Vai pegar uma frase e juntar algum termo a ela: Curso-em-vídeo
