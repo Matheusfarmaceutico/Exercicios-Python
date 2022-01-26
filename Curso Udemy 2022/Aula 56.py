@@ -1,7 +1,12 @@
 
 
 
-lista = [1,2,3,4,5]
-n1, n2, *n = lista
-print(n1, n2, n )
-#empacotando e desempacotando listas
+"""lista = [1,2,3,4,5]
+print(*lista, sep= '-')
+#desempacotando e separando"""
+
+"""def convert(*lista):
+    lista = list(lista) # conversão de uma tupla (valor devolvido normalmente, para ser mutável)
+    lista[0] = 20
+    print(lista)
+convert(1,2,3,4,5)"""
