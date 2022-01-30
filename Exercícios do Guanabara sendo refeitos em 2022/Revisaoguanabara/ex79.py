@@ -1,6 +1,13 @@
+
+
+
 lista = []
 while True:
-    valor = int(input('Digite um valor: '))
+    try:
+        valor = int(input('Digite um valor: '))
+    except:
+        print('Digite um valor válido!')
+        continue
     if valor not in lista:
         valor = lista.append(valor)
     else:
@@ -11,4 +18,5 @@ while True:
         option = str(input('Quer continuar cadastrando? [S/N]: '))
     if option in 'Nn':
         break
-print(lista)
+print(f'Você digitou os valores {lista}')
+print(f'Esses valores em ordem crescente são {sorted(lista)}')
