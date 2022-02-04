@@ -1,25 +1,23 @@
-#Exercício Python 080: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort() No final, mostre a lista ordenada na tela.
+#Exercício Python 079: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente. 
 
 
+def insert_number(valid_number):
+    ascending_number_in_list = []
+    while True: 
+        print(type(valid_number))
+        if valid_number not in ascending_number_in_list:
+            ascending_number_in_list.append(valid_number)
+        else:
+            print('It has already been entered. It will not be added.')
+        option = ' '
+        while option not in 'YyNn':
+            option = str(input('Would you like to continue? '))
+        if option in 'Nn':
+            break
+        else:
+            valid_number = int(input('Enter a NEW valid number: '))
+    return sorted(ascending_number_in_list)
 
-c = 0
-numbers = []
-while True:
-    
-    n = int(input(f'Enter a valid number: '))
-    if c == 0 or n > numbers[-1]:
-        numbers.append(n)
-        print('Number inserted in the last position! ')
-        c += 1
-    else:
-        for key, value in enumerate(numbers):
-            if n <= value:
-                numbers.insert(key,n)
-                print(f'Number inserted into position {key}.')
-                break
-    option = ' '
-    while option not in 'YyNn':
-        option = str(input('Would you like to continue? [Y/N] '))
-    if option in 'Nn':
-        break
-print(numbers)
+
+ascending_list = insert_number(int((input('Enter a valid number, please: '))))
+print(f'Those numbers in ascending order are: {ascending_list}')
