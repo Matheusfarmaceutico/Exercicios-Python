@@ -1,23 +1,26 @@
-#Exercício Python 079: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente. 
+#Exercício Python 083: Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
+
+def math_expression_validator(user_expression):
+    stack = []
+    for value in user_expression:
+        if value == '(':
+            stack.append('(')
+        elif value == ')':
+            if len(stack) > 0:
+                stack.pop()
+            else:
+                stack.append(')')
+                break
+                
+                
+    if len(stack) > 0:
+        return 'Invalid!'
+    else:
+       return 'Valid!'
 
 
-def insert_number(valid_number):
-    ascending_number_in_list = []
-    while True: 
-        print(type(valid_number))
-        if valid_number not in ascending_number_in_list:
-            ascending_number_in_list.append(valid_number)
-        else:
-            print('It has already been entered. It will not be added.')
-        option = ' '
-        while option not in 'YyNn':
-            option = str(input('Would you like to continue? '))
-        if option in 'Nn':
-            break
-        else:
-            valid_number = int(input('Enter a NEW valid number: '))
-    return sorted(ascending_number_in_list)
 
 
-ascending_list = insert_number(int((input('Enter a valid number, please: '))))
-print(f'Those numbers in ascending order are: {ascending_list}')
+validate_express = math_expression_validator(str(input('Enter a valid math expression: ')))
+print(validate_express)
+
