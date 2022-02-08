@@ -1,26 +1,17 @@
-#Exercício Python 083: Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
+#Exercício Python 080: Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort() No final, mostre a lista ordenada na tela.
 
-def math_expression_validator(user_expression):
-    stack = []
-    for value in user_expression:
-        if value == '(':
-            stack.append('(')
-        elif value == ')':
-            if len(stack) > 0:
-                stack.pop()
-            else:
-                stack.append(')')
-                break
-                
-                
-    if len(stack) > 0:
-        return 'Invalid!'
-    else:
-       return 'Valid!'
+def number_in_correct_position():
+    inserted_numbers = []
+    for c in range(0,5):
+        user_values = int(input(f'Entered a valid {c + 1}º number:  '))
+        if c == 0 or user_values >= inserted_numbers[-1]:
+            inserted_numbers.append(user_values)
 
+        else:
+            for key, value in enumerate(inserted_numbers):
+                if user_values <= value:
+                    inserted_numbers.insert(key,user_values)
+                    break
 
-
-
-validate_express = math_expression_validator(str(input('Enter a valid math expression: ')))
-print(validate_express)
-
+    print(inserted_numbers)
+number_in_correct_position()
