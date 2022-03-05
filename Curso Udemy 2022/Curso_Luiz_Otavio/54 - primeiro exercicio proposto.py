@@ -1,10 +1,7 @@
-""" Crie uma função que exiba uma saudação com os parâmetros 'saudacao' e 'nome'
-"""
 
+"""Crie uma função que receba três números como parâmetros e exiba a soma entre eles"""
 
-def welcome(nome):
-    print('Bem vindo' + ',', nome)
+def soma(n1,n2,n3):
+    print(n1 + n2 + n3)
 
-
-name = str(input('Digite seu nome: '))
-welcome(name)
+soma(1,2,3)
