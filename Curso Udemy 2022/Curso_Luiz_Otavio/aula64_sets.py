@@ -40,3 +40,6 @@ print(s3)'''
 s2 = {1,2,3,4,6}
 s3 = s2 ^ s1 # symmetric_difference = ^ vai mostrar elementos elementos incomuns nos dois sets
 print(s3)'''
+
+
+#A diferença entre difference(-) e symmetric_difference é que no caso do primeiro, são exibidos apenas os resultados assimétricos do que está à esquerda do sinal (-), ao passo que symmetric_difference são exibidos valores simétricos.
