@@ -45,6 +45,9 @@ print(divisil_dois_oito)"""
 
 #3 - Utilizando else
 
+
 contagem = list(range(100))
 com_else = [divisivel if divisivel % 3 == 0 else 'nao é' for divisivel in contagem]
 print(com_else)
+
+
