@@ -1,11 +1,28 @@
-s1 = {1,2,3,4,5}
-s2 = {1,2,3,4,6}
-s3 = s1 - s2 #difference: O sinal - mostra qual o elemento distinto que está à esquerda. Se inverter, o resultado muda, mas sempre à esquerda
-print(s3)
-s3 = s2 - s1
-print(s3)
+lista_de_listas_de_inteiros = [
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [9, 1, 8, 9, 9, 7, 2, 1, 6, 8],
+    [1, 3, 2, 2, 8, 6, 5, 9, 6, 7],
+    [3, 8, 2, 8, 6, 7, 7, 3, 1, 9],
+    [4, 8, 8, 8, 5, 1, 10, 3, 1, 7],
+    [1, 3, 7, 2, 2, 1, 5, 1, 9, 9],
+    [10, 2, 2, 1, 3, 5, 10, 5, 10, 1],
+    [1, 6, 1, 5, 1, 1, 1, 4, 7, 3],
+    [1, 3, 7, 1, 10, 5, 9, 2, 5, 7],
+    [4, 7, 6, 5, 2, 9, 2, 1, 2, 1],
+    [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+]
 
-s1 = {1,2,3,4,5}
-s2 = {1,2,3,4,6}
-s3 = s2 ^ s1 # symmetric_difference = ^ vai mostrar elementos elementos incomuns nos dois sets
-print(s3)
+def anti_duplo(parametro):
+    stack = set()
+    retorno = -1
+    for v_individual in parametro:
+        if v_individual in stack:
+            retorno = v_individual
+            break
+        stack.add(v_individual)
+    return retorno
+
+
+for lista_individual in lista_de_listas_de_inteiros:
+    print(lista_individual, anti_duplo(lista_individual))

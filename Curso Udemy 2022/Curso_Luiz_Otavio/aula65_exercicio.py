@@ -27,9 +27,17 @@ lista_de_listas_de_inteiros = [
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
-def anti_duplo(*args):
-    for vlm in args:
-        print(vlm)
+def anti_duplo(parametro_lista):
+    n_checados = set()
+    retorno = -1
+    for inteiro in parametro_lista:
+        if inteiro in n_checados:
+            retorno = inteiro
+            break
+        n_checados.add(inteiro)
+    return retorno
+           
+            
 
-
-anti_duplo(*lista_de_listas_de_inteiros)tt
+for lista_inteiros in lista_de_listas_de_inteiros:
+    print(lista_inteiros, anti_duplo(lista_inteiros))
