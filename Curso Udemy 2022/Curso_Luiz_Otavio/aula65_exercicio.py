@@ -32,4 +32,4 @@ def anti_duplo(*args):
         print(vlm)
 
 
-anti_duplo(*lista_de_listas_de_inteiros)
+anti_duplo(*lista_de_listas_de_inteiros)tt
