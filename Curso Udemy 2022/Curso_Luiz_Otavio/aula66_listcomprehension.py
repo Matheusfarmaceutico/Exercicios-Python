@@ -14,13 +14,8 @@ print(coordenadas)"""
 l2 = [arroba.replace("a","@") for arroba in nomes ]
 print(l2)"""
 
-#invertendo chave e valor
+"""#invertendo chave e valor
 "1. Original"
-
-
-
-
-
 
 tupla = (
     ("chave","valor"),
@@ -34,8 +29,22 @@ print(inverter)
 "3. convertendo para dicionarios"
 
 inverter = dict(inverter)
-print(inverter)
+print(inverter)"""
 
-tupla = [{'Aluno':'Matheus',"Aluno02":"Lucas"}]
-inverter = [(valor,chave) for chave, valor in tupla]
-print(inverter)
+#com condicoes
+#1 - Com apenas uma condicao"
+
+"""contagem = list(range(100))
+divisivel_por_2 = [divisivel for divisivel in contagem if divisivel % 2 == 0]
+print(divisivel_por_2)"""
+
+#2 - Com mais de uma condicao"
+"""contagem = list(range(100))
+divisil_dois_oito = [divisiveis for divisiveis in contagem if divisiveis % 3 == 0 if divisiveis % 8 == 0]
+print(divisil_dois_oito)"""
+
+#3 - Utilizando else
+
+contagem = list(range(100))
+com_else = [divisivel if divisivel % 3 == 0 else 'nao é' for divisivel in contagem]
+print(com_else)
