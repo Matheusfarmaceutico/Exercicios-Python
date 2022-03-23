@@ -13,16 +13,15 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-def anti_duplo(parametro):
+def anti_duplo(arg):
     stack = set()
-    retorno = -1
-    for v_individual in parametro:
-        if v_individual in stack:
-            retorno = v_individual
-            break
-        stack.add(v_individual)
-    return retorno
-
+    v_retorno = -1
+    for valor_individual in arg:
+        if valor_individual in stack:
+            v_retorno = valor_individual
+        stack.add(valor_individual)
+    return v_retorno
 
 for lista_individual in lista_de_listas_de_inteiros:
-    print(lista_individual, anti_duplo(lista_individual))
+    print(lista_individual,anti_duplo(lista_individual))
+
