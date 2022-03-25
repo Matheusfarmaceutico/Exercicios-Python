@@ -11,3 +11,4 @@ def separador(args):
 
 
 print(separador(string))
+print("teste")
