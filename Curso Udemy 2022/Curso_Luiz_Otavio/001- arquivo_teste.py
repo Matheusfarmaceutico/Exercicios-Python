@@ -1,13 +1,15 @@
+lista = list(range(100))
+# Com uma condicao
+one = [n for n in lista if n % 2 == 0]
+print(one)
+print()
+#com duas condições
+
+two = [n for n in lista if n % 2 == 0 if n % 3 == 0]
+print(two)
+
+#com else (if primeiro)
 
 
-
-
-
-string = '01234567890123456789012345678901234567890123456789'
-
-def separador(arg):
-    arg = [arg[i: i + 10] for i in range(0, len(arg),10)]
-    return ".".join(arg)
-
-
-print(separador(string))
+senao = [n if n != 13 else "e 13 memo" for n in lista]
+print(senao)

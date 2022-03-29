@@ -50,3 +50,21 @@ com_else = [divisivel if divisivel % 3 == 0 else 'nao é' for divisivel in conta
 print(com_else)"""
 
 
+# RESUMO DA ORDEM UTILIZADA COM UMA E A PARTIR DE DUAS CONDICOES, E COM ELSE
+
+'''lista = list(range(100))
+# Com uma condicao
+one = [n for n in lista if n % 2 == 0]
+print(one)
+print()'''
+#com duas condições
+
+'''lista = list(range(100))
+two = [n for n in lista if n % 2 == 0 if n % 3 == 0]
+print(two)'''
+
+#com else (if primeiro)
+
+'''lista = list(range(100))
+senao = [n if n != 13 else "e 13 memo" for n in lista]
+print(senao)'''
