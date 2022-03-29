@@ -5,7 +5,6 @@ print(l2)'''
 """l1 = [1,2,3,4,5]
 l2 = [var * 2 for var in l1] #multiplicando cada valor da minha l1 por 2, atraves de listcomprehension.
 print(l2)"""
-
 """l1 = [1,2,3,4,5]
 coordenadas = [(v1,v2)for v1 in l1 for v2 in range(3) ]
 print(coordenadas)"""
@@ -46,8 +45,8 @@ print(divisil_dois_oito)"""
 #3 - Utilizando else
 
 
-contagem = list(range(100))
+"""contagem = list(range(100))
 com_else = [divisivel if divisivel % 3 == 0 else 'nao é' for divisivel in contagem]
-print(com_else)
+print(com_else)"""
 
 
