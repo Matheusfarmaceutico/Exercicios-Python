@@ -3,13 +3,13 @@
 
 
 
-"""carrinho = []
+carrinho = []
+carrinho.append(("melancia",1.89))
+carrinho.append(("isopor",2))
+total = [(y) for x,y in carrinho]
 
-carrinho.append(('Macarrão',30))
-carrinho.append(('Feijão',20))
-
-total = [y for x,y in carrinho]
-print(sum(total))"""
+tot = sum(total)
+print(f'{tot:.2f}')
 
 
 
@@ -18,7 +18,7 @@ print(sum(total))"""
 
 carrinho = []
 while True:
-    produto = input("Digite o nome e o valor de um produto: ")
+    produto = input("Digite o nome de um produto: ")
     valor = float(input("Digite o valor de tal produto: "))
     carrinho.append((produto,valor))
     option = str(input("Quer continuar?"))
@@ -30,5 +30,7 @@ def outro(lista):
     s = 0
     for v in lista:
         s += v[1]
-    return s
+    return f'{s:.2f}'
 print(outro(carrinho))
+
+
