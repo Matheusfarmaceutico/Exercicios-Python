@@ -1,16 +1,5 @@
 
-
-def carrinho_compras():
-    carrinho = []
-    while True: 
-        produto = input("Digite o nome do produto:")
-        valor = float(input('Digite o valor deste mesmo produto: '))
-        carrinho.append((produto,valor))
-        option = str(input("Quer continuar? [S/N]: "))
-        if option in 'Nn':
-            break
-    resul = [(y) for x,y in carrinho]
-    return sum(resul)
-
-
-print(carrinho_compras())
+lista_a = [1,2,3,4,5,6,7]
+lista_b = [1,2,3,4]
+lista_c = [x + y for x,y in zip(lista_a,lista_b)]
+print(lista_c)
