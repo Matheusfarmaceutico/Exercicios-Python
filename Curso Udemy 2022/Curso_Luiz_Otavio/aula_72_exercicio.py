@@ -6,12 +6,10 @@
 carrinho = []
 carrinho.append(("melancia",1.89))
 carrinho.append(("isopor",2))
-total = [(y) for x,y in carrinho]
+total = sum([float(y) for x,y in carrinho])
+print(f'{total:.2f}')
 
-tot = sum(total)
-print(f'{tot:.2f}')
-
-
+"""Desafio para amanha é transformar esse esquema de list  comp"""
 
 #sem utilizar list comprehension
 
