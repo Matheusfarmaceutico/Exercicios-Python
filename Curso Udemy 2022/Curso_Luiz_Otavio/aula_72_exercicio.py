@@ -9,26 +9,19 @@ carrinho.append(("isopor",2))
 total = sum([float(y) for x,y in carrinho])
 print(f'{total:.2f}')
 
-"""Desafio para amanha é transformar esse esquema de list  comp"""
+""" Utilizando funcoes"""
 
-#sem utilizar list comprehension
-
-
-carrinho = []
-while True:
-    produto = input("Digite o nome de um produto: ")
-    valor = float(input("Digite o valor de tal produto: "))
-    carrinho.append((produto,valor))
-    option = str(input("Quer continuar?"))
-    if option in "Nn":
-        break
-
-
-def outro(lista):
-    s = 0
-    for v in lista:
-        s += v[1]
-    return f'{s:.2f}'
-print(outro(carrinho))
+def carrinho_compras():
+    carrinho = []
+    while True: 
+        produto = input("Digite o nome do produto:")
+        valor = float(input('Digite o valor deste mesmo produto: '))
+        carrinho.append((produto,valor))
+        option = str(input("Quer continuar? [S/N]: "))
+        if option in 'Nn':
+            break
+    resul = [(y) for x,y in carrinho]
+    return sum(resul)
 
 
+print(carrinho_compras())

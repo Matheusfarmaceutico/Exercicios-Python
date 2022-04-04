@@ -1,17 +1,16 @@
-def cadastrar_produtos():
+
+
+def carrinho_compras():
     carrinho = []
-
-    while True:
-        produto = str(input("Digite o nome de um produto: "))
-        preco = float(input("Digite o valor desse mesmo produto: "))
-        option = str(input("Quer continuar? S/N "))
-        carrinho.append((produto,preco))
-        if option in "Nn":
+    while True: 
+        produto = input("Digite o nome do produto:")
+        valor = float(input('Digite o valor deste mesmo produto: '))
+        carrinho.append((produto,valor))
+        option = str(input("Quer continuar? [S/N]: "))
+        if option in 'Nn':
             break
-    return carrinho
-def compras(lista):
-    total = [(x,y) for x,y in cadastrar_produtos]
-    print(total)
-#dando erro, continuar tentando amanha
+    resul = [(y) for x,y in carrinho]
+    return sum(resul)
 
-print(compras(cadastrar_produtos))
+
+print(carrinho_compras())
