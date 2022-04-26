@@ -24,4 +24,7 @@ for agrupamentos, full_dados in grupos_separados:
     print(f"Quantidade de alunos do agrupamento {agrupamentos}:  {quantidade}")
 
 
-print("internacional")
+print("internacional5000")
+
+
+print("campeao")
