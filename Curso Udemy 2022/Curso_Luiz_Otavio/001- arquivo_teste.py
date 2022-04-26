@@ -23,4 +23,5 @@ for agrupamentos, full_dados in grupos_separados:
     quantidade = len(list(v2)) #V2 é uma cópia de full_dados, e a utilizo aqui para quantificar quantos alunos estão em um determinado grupamento de notas. Note que preciso v2 (que é um objeto) para uma lista, para que eu quantificar antes de exibir o len, de fato.
     print(f"Quantidade de alunos do agrupamento {agrupamentos}:  {quantidade}")
 
-print("teste")
+
+print("internacional")
