@@ -27,4 +27,4 @@ for agrupamentos, full_dados in grupos_separados:
 print("internacional5000")
 
 
-print("campeaoIMEDIATO")
+print("INTERNACIONAL KASSINAO")
