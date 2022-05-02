@@ -104,6 +104,6 @@ print(next(lista))"""
 #Mais uma vez podemos comparar o quanto geradores economizam mais memória do que listas
 
 lista = [x for x in range(1000)]
-lista_gerador = (x for x in range(1000))
+lista_gerador = (x for x in range(1000)) #parênteses criam geradores
 print(sys.getsizeof(lista)) #Python 3.9.9 = 8856 bytes
 print(sys.getsizeof(lista_gerador)) #Python 3.9.9 = 112 bytes
