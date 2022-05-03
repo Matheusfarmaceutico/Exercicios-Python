@@ -1,9 +1,10 @@
-from itertools import count
-from itertools import zip_longest
-cidade = ["Sao Paulo", "Goiânia"]
-estado = ["SP","GO"]
-cont = count()
-cidade_estado = zip(cont, estado, cidade)
-print(cidade_estado)
-for v in cidade_estado:
-    print(*v)
+
+
+lista1 = [1,2,3,4,5,6]
+lista2 = [6,7,8,9,10]
+
+
+def soma(*args):
+    lista_soma = [x + y for x,y in zip(args)]
+
+print(soma(lista1,lista2))
