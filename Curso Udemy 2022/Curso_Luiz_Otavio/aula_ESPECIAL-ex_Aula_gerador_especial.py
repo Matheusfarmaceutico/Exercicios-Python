@@ -14,4 +14,24 @@ def cadastro(nome,curso):
     return dados
 
 
-print(cadastro(matriculados,opcao_curso))
+for v in cadastro(matriculados,opcao_curso):
+    print(v)
+
+print("-="*30)
+
+#utilizando geradores
+
+
+def gerador (nome,curso):
+    for i,(nome,curso) in enumerate(zip(nome,curso)):
+        alunos = {
+            "ID":i,
+            "Aluno":nome,
+            "Curso":curso
+        }
+        yield alunos
+
+
+g = gerador(matriculados,opcao_curso)
+for v in g:
+    print(v)

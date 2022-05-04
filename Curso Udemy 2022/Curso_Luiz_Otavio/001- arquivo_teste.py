@@ -1,16 +1,22 @@
 matriculados= ["Matheus","Ana","Yara","Joana"]
 opcao_curso = ["Farmácia","História","Biologia","Física"]
-def cadastro(nome,curso):
-    dados = []
+
+
+
+
+
+
+
+def gerador (nome,curso):
     for i,(nome,curso) in enumerate(zip(nome,curso)):
-        aluno = {
-            "Matrícula": i,
-            "Nome":nome,
+        alunos = {
+            "ID":i,
+            "Aluno":nome,
             "Curso":curso
         }
-        dados.append(aluno)
-    return dados
+        yield alunos
 
 
-print(cadastro(matriculados,opcao_curso))
-
+g = gerador(matriculados,opcao_curso)
+for v in g:
+    print(v)
