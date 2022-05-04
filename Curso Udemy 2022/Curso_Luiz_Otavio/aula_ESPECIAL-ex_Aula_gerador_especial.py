@@ -1,3 +1,5 @@
+
+#Utilizando listas normais, sem geradores.
 matriculados= ["Matheus","Ana","Yara","Joana"]
 opcao_curso = ["Farmácia","História","Biologia","Física"]
 def cadastro(nome,curso):
@@ -13,4 +15,3 @@ def cadastro(nome,curso):
 
 
 print(cadastro(matriculados,opcao_curso))
-
