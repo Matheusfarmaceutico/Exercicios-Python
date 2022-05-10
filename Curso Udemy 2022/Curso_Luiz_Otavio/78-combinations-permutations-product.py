@@ -28,5 +28,5 @@ print(separador())
 
 from itertools import product
 pessoas = ["Luiz","André","Eduardo","Letícia", "Fabrício","Rose"]
-for grupo in product(pessoas,repeat=2):
+for grupo in product(pessoas,repeat=2): #É necessário que haja "repeat"
     print(grupo)
