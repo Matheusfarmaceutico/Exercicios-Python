@@ -1,5 +1,8 @@
 
 #Utilizando listas normais, sem geradores.
+from timeit import timeit
+
+
 matriculados= ["Matheus","Ana","Yara","Joana"]
 opcao_curso = ["Farmácia","História","Biologia","Física"]
 def cadastro(nome,curso):
@@ -35,3 +38,4 @@ def gerador (nome,curso):
 g = gerador(matriculados,opcao_curso)
 for v in g:
     print(v)
+
