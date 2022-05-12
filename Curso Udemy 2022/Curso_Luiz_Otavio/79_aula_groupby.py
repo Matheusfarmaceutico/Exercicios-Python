@@ -139,7 +139,7 @@ for agrupamento, dados_person in agrupamento:
     print(quantidade)
     for agrupamento in dados_person:
         print(agrupamento["Nome"])
-    # Note que eu fizer dessa forma, nao consigo mostrar o nome dos alunos, pois os dados de iteradores já foi consumido, havendo a necessidade de criar uma cópia de dados_person, através do módulo tee.
+    # Note que eu fizer dessa forma, nao consigo mostrar o nome dos alunos, pois os dados de iteradores já foram consumidos, havendo a necessidade de criar uma cópia de dados_person, através do módulo tee.
 print(separador())
 alunos = [
     {"Nome": "Luiz", "nota": "A"},
