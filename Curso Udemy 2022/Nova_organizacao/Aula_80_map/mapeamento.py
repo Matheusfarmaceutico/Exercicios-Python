@@ -24,7 +24,8 @@ print(f"Tamanho em bytes utilizando list comprehension: {sys.getsizeof(utilizand
 # 3 = Atualizando valores em tabelas com map
 ## 3.1 - Atualizando preços
 def att_precos(p):
-    p["preco"] = round(p["preco"] * 1.50,2)
+    p["preco"] = round(p["preco"] * 1.50,2) # O 2 indica o número de casas decimais que ele vai me devolver.
+
     return p
 
 
