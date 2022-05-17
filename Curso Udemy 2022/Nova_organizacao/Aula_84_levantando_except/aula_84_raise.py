@@ -45,7 +45,9 @@ def divide(n1, n2):
     return n1 / n2
 
 try:
-    print(divide(2,0))
+    print(divide(2,5))
 except ValueError as error:
     print("Você tentou dividir um valor por 0, tente novamente!")
+finally:
+    print("sempre executada")
 print("continua")
