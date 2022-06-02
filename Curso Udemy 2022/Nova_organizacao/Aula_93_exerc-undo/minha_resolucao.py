@@ -1,4 +1,6 @@
 
+
+# CHECAR GITHUB PARA VER ESTE MESMO CÓDIGO REFEITO COM VARIÁVEIS EM PORTUGUES PARA FÁCIL ENTENDIMENTO!!!!!
 """
 Faça uma lista de tarefas com as seguintes opções:
     adicionar tarefa
