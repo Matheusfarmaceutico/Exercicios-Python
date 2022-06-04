@@ -19,7 +19,7 @@ variavel = master()
 print(variavel())"""
 
 
-"""# exemplo 03 - funcao decoradora
+# exemplo 03 - funcao decoradora
 
 
 def master(funcao):

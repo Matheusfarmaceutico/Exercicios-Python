@@ -33,9 +33,9 @@ print(inverter)"""
 #com condicoes
 #1 - Com apenas uma condicao"
 
-"""contagem = list(range(100))
+contagem = list(range(100))
 divisivel_por_2 = [divisivel for divisivel in contagem if divisivel % 2 == 0]
-print(divisivel_por_2)"""
+print(divisivel_por_2)
 
 #2 - Com mais de uma condicao"
 """contagem = list(range(100))
