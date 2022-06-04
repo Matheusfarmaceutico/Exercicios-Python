@@ -23,6 +23,13 @@ Recap.
 6543298765432 -> Segunro digito
 """
 
+def contador(sem_digitos):
+    lista = []
+    for v in sem_digitos:
+        v = int(v)
+        lista.append(v * len(sem_digitos))
+    return lista
+        
 
-valor = cnpj.elimina_caracter("04.252.011/0001-10")
-print(valor)
+
+contador("04252011000110")
