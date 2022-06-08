@@ -1,6 +1,8 @@
 
-from curses.ascii import isalnum
+
 import re
+
+from click import argument
 "04.252.011/0001-10"
 "04252011000110"
 
@@ -10,8 +12,17 @@ def valida(argumento):
     sem_digitos = eliminar_digitos_padrao(tratado)
     converte_inteiro = converter_para_inteiro(sem_digitos)
     soma_e_multiplicacao = multiplicacao_e_soma(converte_inteiro)
-    print(soma_e_multiplicacao)
-   
+    def make_cnpj(digito):
+        novo_cpf = converte_inteiro
+        if digito <= 9:
+            novo_cpf.append(digito)
+        else:
+            novo_cpf.append(0)
+        return novo_cpf
+    return make_cnpj(primeiro_digito(soma_e_multiplicacao))
+
+
+    
 
 def number_of_characters(opcao):
     opcao = str(opcao)
@@ -43,10 +54,18 @@ def multiplicacao_e_soma(convertido_for_int):
     return sum(multi)
 
 
+def primeiro_digito(number):
+    form = 11 - (number % 11)
+    return form
+
+def segundo_digito(number):
+    form = 11 - (number % 11)
+    return form
+
 while True:
     user = input("Insira: ").strip()
     if number_of_characters(user) == True:
-        valida(user)
+        print(valida(user))
         break
     else:
         print("Número de caracteres inválido! Tente novamente.")
