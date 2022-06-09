@@ -4,11 +4,12 @@ import re
 "04.252.011/0001-10"
 
 
-
 def validador_cnpj(cnpj_tratado_caracter_digito):
     tratar_carac_digi_local = tratar_caracteres_e_digitos(cnpj_tratado_caracter_digito)
     contagem_numeros = contagem(tratar_carac_digi_local)
     soma_multi = soma_multiplicacao(contagem_numeros, tratar_carac_digi_local)
+    calculo = formula(soma_multi)
+ 
     
 
 def tratar_caracteres_e_digitos(cnpj_original):
@@ -18,9 +19,7 @@ def tratar_caracteres_e_digitos(cnpj_original):
     return excluir_digitos_verificadores()
         
 
-
 def contagem(arg):
-    
     if len(arg) == 12:
         valores = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
         return valores
@@ -33,11 +32,14 @@ def contagem(arg):
 def soma_multiplicacao(var1, var2):
      lista_inteiros = [int(x) for x in var2]
      multi = [x * y for x,y in zip(lista_inteiros,var1)]
-     print(sum(multi))
-     
-    
+     return sum(multi)
+       
 
-        
+def formula(valor_soma_multi):
+    resultado = 11 - (valor_soma_multi % 11)
+    print(resultado)
+    #resul = 11 - (valor_soma_multi % 11)
+    #return resul
 
 
 validador_cnpj("04.252.011/0001-10")
