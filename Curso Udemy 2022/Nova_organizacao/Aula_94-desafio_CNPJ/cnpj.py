@@ -1,3 +1,5 @@
+
+from audioop import mul
 import re
 "04.252.011/0001-10"
 
@@ -6,7 +8,7 @@ import re
 def validador_cnpj(cnpj_tratado_caracter_digito):
     tratar_carac_digi_local = tratar_caracteres_e_digitos(cnpj_tratado_caracter_digito)
     contagem_numeros = contagem(tratar_carac_digi_local)
-    soma_multi = soma_multiplicacao(contagem_numeros)
+    soma_multi = soma_multiplicacao(contagem_numeros, tratar_carac_digi_local)
     
 
 def tratar_caracteres_e_digitos(cnpj_original):
@@ -28,9 +30,14 @@ def contagem(arg):
     return contagem()
 
 
-def soma_multiplicacao(contagem):
-    for c, v in enumerate(contagem):
-        tratar_caracteres_e_digitos[c] * v
+def soma_multiplicacao(var1, var2):
+     lista_inteiros = [int(x) for x in var2]
+     multi = [x * y for x,y in zip(lista_inteiros,var1)]
+     print(sum(multi))
+     
+    
+
+        
 
 
 validador_cnpj("04.252.011/0001-10")
