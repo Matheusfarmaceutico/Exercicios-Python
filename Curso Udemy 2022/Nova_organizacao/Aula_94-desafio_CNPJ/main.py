@@ -33,3 +33,14 @@ def contador(sem_digitos):
 
 
 contador("04252011000110")
+
+
+ def contagem():
+        valores = []
+        if len(arg) == 12:
+            valores.append(5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2)
+        elif len(arg) == 13:
+            valores.append(6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2)
+        
+        
+    return contagem

@@ -71,6 +71,7 @@ def velocidade(funcao):
         return resultado
     return interna
 
+
 @velocidade
 def demora():
     for i in range(5):
